@@ -37,7 +37,7 @@ class User(Base):
     email: Mapped[str] = mapped_column(unique=True, nullable=False)
     updated_at: Mapped[datetime] = mapped_column(
         server_default=func.now(), 
-        server_onupdate=func.now()      #quando for atualizado, deve-se pegar a data e hora atual
+        onupdate=func.now()      #quando for atualizado, deve-se pegar a data e hora atual
     )
     created_at: Mapped[datetime] = mapped_column(
         server_default=func.now()           #quando um registro for criado, deve-se pegar a data e hora atual
