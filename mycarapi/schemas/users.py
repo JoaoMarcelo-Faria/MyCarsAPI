@@ -49,5 +49,6 @@ class UpdateUserSchema(BaseModel):
 
 class ListUserSchema(BaseModel):
     users: List[UserResponseSchema]
+    # Paginação
     offset: int
     limit: int
